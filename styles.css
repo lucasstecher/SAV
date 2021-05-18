@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sav{
+    background-color: #54CFAA;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 100vh;
+    width: 20vw;
+    justify-content: space-evenly;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.sav h1{
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    text-shadow: 5px 5px white, 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#dot{
+    font-family: none;
+}
+
+.sob-login{
+    background-color: #A9E7D5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 4px 4px white, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 1.5;
+}
+
+.login input{
+    padding: 20px;
+    margin: 10px;
+    width: 30rem;
+    background-color: #54CFAA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 25px;
+}
+
+.login button{
+    background-color: #54CFAA;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 2.2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px;
+    border-radius: 12px;
+    width: 8rem;
+    height: 3rem;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.botao{
+    display: flex;
+    width: 33rem;
+    justify-content: center;
+}
