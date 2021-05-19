@@ -89,7 +89,7 @@
     background-color: #9954CF;
 }
 
-@media (max-height: 1332px)
+@media (min-height: 1024px)
 {
     .menu-header{
         height: 12vh;
