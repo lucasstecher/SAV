@@ -88,3 +88,40 @@
 .menu-faturamento button{
     background-color: #9954CF;
 }
+
+@media (max-width: 1333px)
+{
+    .menu-header{
+        height: 10vh;
+        width: 100vw;
+    }
+    
+    .fa-power-off{
+        font-size: 2.4rem;
+    }
+    
+    .menu-header h1{
+        font-size: 3.5rem;
+        padding: 5px 50px;
+    }
+    .menu-header button{
+        right: 20px;
+        top: 10px;
+        border-radius: 10px;
+    }
+    .logoff{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .menu-main{
+        width: 100vw;
+        height: 92vh;
+    }
+    
+    .menu-main button{
+        font-size: 2rem;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+}
