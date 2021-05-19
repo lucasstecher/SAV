@@ -9,17 +9,24 @@
     background-color: #54CFAA;
     display: flex;
     flex-direction: row;
-    height: 7vh;
+    height: 8vh;
     width: 100vw;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.fa-power-off{
+    font-size: 2.4rem;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .menu-header h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     display: flex;
     padding: 5px 50px;
     font-family: 'Roboto', sans-serif;
     color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu-header button{
     background-color: #DC4444;
@@ -33,17 +40,51 @@
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    border-radius: 10px;
 }
 .logoff{
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 .menu-main{
     background-color: #A9E7D5;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
     justify-content: center;
     align-items: center;
+}
+
+.menu-main button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin: 2rem;
+    padding: 4rem;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+}
+
+.menu-venda button{
+    background-color: #5494CF;
+}
+
+.menu-estoque button{
+    background-color: #8ACF54;
+}
+
+.menu-funcionarios button{
+    background-color: #D8D13A;
+}
+
+.menu-clientes button{
+    background-color: #CF9654;
+}
+
+.menu-faturamento button{
+    background-color: #9954CF;
 }
