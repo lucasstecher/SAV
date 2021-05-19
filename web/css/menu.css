@@ -91,10 +91,10 @@
     background-color: #9954CF;
 }
 
-@media (max-width: 1333px)
+@media (min-width: 1024px) and (max-height: 720px)
 {
     .menu-header{
-        height: 10vh;
+        height: 12vh;
         width: 100vw;
     }
     
@@ -117,7 +117,7 @@
     }
     .menu-main{
         width: 100vw;
-        height: 92vh;
+        height: 88vh;
     }
     
     .menu-main button{
