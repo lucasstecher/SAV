@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.clientes-header{
+    background-color: #54CFAA;
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    width: 100vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.clientes-header h1{
+    font-size: 3.5rem;
+    display: flex;
+    padding: 5px 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.clientes-header button{
+    background-color: #33B78F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
+.menu{
+    display: flex;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.fa-bars{
+    color: #A9E7D5;
+    font-size: 2.6rem;
+}
+.clientes-main{
+    background-color: #A9E7D5;
+    display: flex;
+    width: 100vw;
+    height: 92vh;
+}
