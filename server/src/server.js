@@ -1,6 +1,10 @@
+// faz a requisição de express, algo semelhante ao #include em C ou import em py
 const express = require("express");
-// associa express a constante app
+// cria app com o módulo express
 const app = express();
+
+//
+app.use(express.static('../../'));
 
 
 // .get especifica o que o que acontece quando o navegador
@@ -10,7 +14,27 @@ const app = express();
 // quando ocorre o get request ele retorna essa callback function, com os parâmetros
 // req e res
 app.get("/", function(req, res){
-    res.send('hello world!');
+    res.sendFile('index.html', {root:'../../web'});
+});
+
+app.get("/menu", function(req, res){
+    res.send('Menu');
+});
+
+app.get("/venda", function(req, res){
+    res.send('Venda');
+});
+
+app.get("/estoque", function(req, res){
+    res.send('Estoque');
+});
+
+app.get("/clientes", function(req, res){
+    res.send('Clientes');
+});
+
+app.get("/funcionarios", function(req, res){
+    res.send('Funcionarios');
 });
 
 app.listen(3000, function(){
