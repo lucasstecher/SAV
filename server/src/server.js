@@ -40,3 +40,8 @@ app.get("/funcionarios", function(req, res){
 app.listen(3000, function(){
     console.log('Server running on port 3000')
 });
+
+
+// incluir rota /autenticar para login, método post
+// máscara js para entrada de dados (pontuar a entrada)
+// oder by no sql para apresentar as vendas, e filtrar(tipos de produto), e pela data
