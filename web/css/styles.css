@@ -40,11 +40,14 @@
 
 .login {
     font-size: 3rem;
-    display: flex;
-    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     text-shadow: 4px 4px white, 0px 4px 4px rgba(0, 0, 0, 0.25);
     line-height: 1.5;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
 }
 
 .login input{
