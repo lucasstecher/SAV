@@ -3,7 +3,7 @@ const express = require("express");
 // cria app com o módulo express
 const app = express();
 
-//
+// define o local dos statics
 app.use(express.static('../../'));
 
 
@@ -18,23 +18,23 @@ app.get("/", function(req, res){
 });
 
 app.get("/menu", function(req, res){
-    res.send('Menu');
+    res.sendFile('menu.html', {root:'../../web/components'});
 });
 
 app.get("/venda", function(req, res){
-    res.send('Venda');
+    res.sendFile('venda.html', {root:'../../web/components'});
 });
 
 app.get("/estoque", function(req, res){
-    res.send('Estoque');
+    res.sendFile('estoque.html', {root:'../../web/components'});
 });
 
 app.get("/clientes", function(req, res){
-    res.send('Clientes');
+    res.sendFile('clientes.html', {root:'../../web/components'});
 });
 
 app.get("/funcionarios", function(req, res){
-    res.send('Funcionarios');
+    res.sendFile('funcionarios.html', {root:'../../web/components'});
 });
 
 app.listen(3000, function(){
