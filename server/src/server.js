@@ -1,7 +1,10 @@
 // faz a requisição de express, algo semelhante ao #include em C ou import em py
 const express = require("express");
+const bodyParser = require("body-parser");
+
 // cria app com o módulo express
 const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
 
 // define o local dos statics
 app.use(express.static('../../'));
@@ -41,6 +44,16 @@ app.listen(3000, function(){
     console.log('Server running on port 3000')
 });
 
+//modificar, apenas entra no menu, sem autenticar
+// autentica com valores pré definidos, editar para
+// funcionar procurando no banco de dados
+app.post("/autenticar", function(req, res){
+    if(req.body.usuario == 'gerente' && req.body.senha == 'gerente'){
+        res.redirect('/menu');
+    } else {
+        res.redirect('/');
+    }
+})
 
 // incluir rota /autenticar para login, método post
 // máscara js para entrada de dados (pontuar a entrada)

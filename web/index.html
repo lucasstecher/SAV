@@ -22,12 +22,21 @@
             <h1>Login</h1>
             <form action="/autenticar" method="post">
                 <input type="text" name="usuario" id="user" placeholder="Usuário" required>
-                <input type="text" name="senha" id="password" placeholder="Senha" required>
+                <input type="password" name="senha" id="password" placeholder="Senha" required>
                 <div class='botao'><button type="submit">Entrar</button></div>
             </form>
         </div>
         </div>
     </div>
-    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        </script>
 </body>
 </html>
