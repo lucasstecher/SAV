@@ -47,6 +47,7 @@ app.listen(3000, function(){
 //modificar, apenas entra no menu, sem autenticar
 // autentica com valores pré definidos, editar para
 // funcionar procurando no banco de dados
+// incluir alert ao errar login/senha
 app.post("/autenticar", function(req, res){
     if(req.body.usuario == 'gerente' && req.body.senha == 'gerente'){
         res.redirect('/menu');
