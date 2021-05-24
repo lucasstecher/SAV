@@ -20,5 +20,7 @@ const Estoque = connection.define('tb_estoque', {
     }
 })
 
-Estoque.sync({force: false}).then(() => {});
-Estoque.sync({ alter: true });
+Estoque.sync({force: false});
+Estoque.sync({ alter: false });
+
+module.exports = Estoque;

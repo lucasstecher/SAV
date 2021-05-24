@@ -8,7 +8,8 @@ const connection = new Sequelize('VZt9exFvaK', 'VZt9exFvaK', 'xTxBRbpqCB',{
     database: 'VZt9exFvaK',
     dialect: 'mysql',
     define:{
-        freezeTableName:true
+        freezeTableName:true,
+        timestamps:false
     }
 });
 

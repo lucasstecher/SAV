@@ -2,11 +2,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-const clienteModel = require("./models/Cliente");
-//const estoqueModel = require("./models/Estoque");
-//const funcionarioModel = require("./models/Funcionarios");
-//const gerenteModel = require("./models/Gerente");
-//const vendasModel = require("./models/Vendas");
+const Cliente = require("./models/Cliente");
+const Estoque = require("./models/Estoque");
+const Funcionario = require("./models/Funcionarios");
+const Gerente = require("./models/Gerente");
+const Venda = require("./models/Vendas");
 
 // database
 
@@ -72,4 +72,20 @@ app.post("/autenticar", (req, res) => {
     } else {
         res.redirect('/');
     }
+})
+
+app.post("/salvarcliente", (req,res) =>{
+    var nome = req.body.nome;
+    var telefone = req.body.telefone;
+    var cpf = req.body.cpf;
+    var pontos = req.body.pontos;
+    Cliente.create({
+        nome_cliente: nome,
+        tel_cliente: telefone,
+        cpf_cliente: cpf,
+        pontos_cliente: pontos
+    }).then(() => {
+        console.log('Cliente adicionado!');
+        res.redirect("/");
+    })
 })

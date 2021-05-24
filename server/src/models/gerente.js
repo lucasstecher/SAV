@@ -16,5 +16,7 @@ const Gerente = connection.define('tb_gerente', {
     }
 })
 
-Gerente.sync({force: false}).then(() => {});
-Gerente.sync({ alter: true });
+Gerente.sync({force: false});
+Gerente.sync({ alter: false });
+
+module.exports = Gerente;

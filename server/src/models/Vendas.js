@@ -8,5 +8,7 @@ const Venda = connection.define('tb_venda', {
     }
 })
 
-Venda.sync({force: false}).then(() => {});
-Venda.sync({ alter: true });
+Venda.sync({force: false});
+Venda.sync({ alter: false });
+
+module.exports = Venda;

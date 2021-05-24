@@ -16,5 +16,7 @@ const Funcionario = connection.define('tb_funcionario', {
     }
 })
 
-Funcionario.sync({force: false}).then(() => {});
-Funcionario.sync({ alter: true });
+Funcionario.sync({force: false});
+Funcionario.sync({ alter: false });
+
+module.exports = Funcionario;
