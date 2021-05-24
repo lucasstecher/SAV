@@ -6,7 +6,10 @@ const connection = new Sequelize('VZt9exFvaK', 'VZt9exFvaK', 'xTxBRbpqCB',{
     user: 'VZt9exFvaK',
     password: 'xTxBRbpqCB',
     database: 'VZt9exFvaK',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    define:{
+        freezeTableName:true
+    }
 });
 
 module.exports = connection;

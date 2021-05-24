@@ -2,7 +2,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-const clienteModel = require("./models/Clientes");
+const clienteModel = require("./models/Cliente");
+//const estoqueModel = require("./models/Estoque");
+//const funcionarioModel = require("./models/Funcionarios");
+//const gerenteModel = require("./models/Gerente");
+//const vendasModel = require("./models/Vendas");
+
 // database
 
 connection

@@ -20,5 +20,5 @@ const Cliente = connection.define('tb_cliente', {
     }
 })
 
-Cliente.sync({force: false}).then(() => {});
-Cliente.sync({ alter: true });
+Cliente.sync({force: false});
+Cliente.sync({ alter: false });
