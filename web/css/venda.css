@@ -50,4 +50,66 @@
     display: flex;
     width: 100vw;
     height: 92vh;
+    flex-wrap: wrap;
+}
+.venda-pesquisa{
+    background-color: white;
+    width: 35vw;
+    height: 5vh;
+    margin: 10px 46px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-pesquisa input{
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    font-size: 30px;
+    outline: none;
+    margin-left: 10px;
+}
+.venda-pesquisa button{
+    background-color: #33B78F;
+    color: white;
+    border-style: none;
+    width: 3vw;
+    height: 5vh;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-total{
+    background-color: white;
+    width: 20vw;
+    height: 5vh;
+    align-items: right;
+    position: absolute;
+    margin:10px 0 10px 10px;
+    right: 46px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-tabela{
+    background-color: #33B78F;
+    display: flex;
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto 30px auto;
+    padding-top: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-tabela-header{
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 95vw;
+    height: 5vh;
+}
+.venda-butoes-cpf{
+    background-color: #33B78F;
+    display: flex;
+    width: 95vw;
+    height: 15vh;
+    margin: 10px auto 10px auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
