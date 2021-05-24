@@ -2,7 +2,11 @@ const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
 const Venda = connection.define('tb_venda', {
-    date:{
+    idt_venda:{
+        type: Sequelize.STRING,
+        primaryKey: true
+    },
+    date_venda:{
         type: Sequelize.DATE,
         allowNull: false
     }

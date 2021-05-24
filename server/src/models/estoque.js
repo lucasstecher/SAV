@@ -2,19 +2,23 @@ const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
 const Estoque = connection.define('tb_estoque', {
-    nome:{
+    idt_produto:{
+        type: Sequelize.STRING,
+        primaryKey: true
+    },
+    nome_produto:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    preco:{
+    preco_produto:{
         type: Sequelize.FLOAT,
         allowNull: false
     },
-    quantidade:{
+    quant_produto:{
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    codigo:{
+    codigo_produto:{
         type: Sequelize.STRING,
         allowNull: false
     }
