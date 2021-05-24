@@ -1,6 +1,6 @@
-const sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 
-const connection = new sequelize('VZt9exFvaK', 'VZt9exFvaK', 'xTxBRbpqCB',{
+const connection = new Sequelize('VZt9exFvaK', 'VZt9exFvaK', 'xTxBRbpqCB',{
     host: 'remotemysql.com',
     port: 3306,
     user: 'VZt9exFvaK',
