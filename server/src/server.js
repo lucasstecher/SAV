@@ -1,6 +1,17 @@
 // faz a requisição de express, algo semelhante ao #include em C ou import em py
 const express = require("express");
 const bodyParser = require("body-parser");
+const connection = require("./database/database");
+// database
+
+connection
+    .authenticate()
+    .then(() => {
+        console.log('Conexão feita com o banco de dados!');
+    })
+    .catch((msgErro) => {
+        console.log(msgErro);
+    })
 
 // cria app com o módulo express
 const app = express();
