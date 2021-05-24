@@ -2,19 +2,23 @@ const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
 const Cliente = connection.define('tb_cliente', {
-    nome:{
+    idt_cliente:{
+        type: Sequelize.STRING,
+        primaryKey: true
+    },
+    nome_cliente:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    telefone:{
+    tel_cliente:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    cpf:{
+    cpf_cliente:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    pontos:{
+    pontos_cliente:{
         type: Sequelize.INTEGER,
         allowNull: false
     }
@@ -22,3 +26,5 @@ const Cliente = connection.define('tb_cliente', {
 
 Cliente.sync({force: false});
 Cliente.sync({ alter: false });
+
+module.exports = Cliente;
