@@ -97,13 +97,31 @@
     margin: 0 auto 30px auto;
     padding-top: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
 }
 .venda-tabela-header{
-    background-color: white;
     display: flex;
     flex-wrap: nowrap;
     width: 95vw;
     height: 5vh;
+}
+.venda-tabela-header div{
+    background-color: #A9E7D5;
+    display: flex;
+    align-items: center;
+    padding-right: 5rem;
+    margin-right: 3rem;
+    margin-left: 0.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-tabela-header h1{
+    padding-left: 5rem;
+}
+.venda-tabela-main td{
+    padding-right: 12rem;
+    padding-left: 5rem;
+    font-size: 1.5rem;
 }
 .venda-butoes-cpf{
     background-color: #33B78F;
@@ -112,4 +130,30 @@
     height: 15vh;
     margin: 10px auto 10px auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-cpf{
+    display: flex;
+    padding: 3rem;
+}
+.venda-cpf input{
+    width: 12vw;
+    height: 5vh;
+    outline: none;
+    border-style: none;
+    font-size: 1.5rem;
+}
+.venda-butoes{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 3rem;
+    margin-left: 10rem;
+}
+.venda-butoes button{
+    margin-right: 5rem;
+    width: 10vw;
+    height: 5vh;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    border-style: none;
+    cursor: pointer;
 }
