@@ -77,15 +77,6 @@ app.listen(3000, () => {
 // funcionar procurando no banco de dados, usar parâmetro talvez? (segurança)
 // incluir alert ao errar login/senha
 
-/* app.post("/autenticar", (req, res) => {
-    if(req.body.usuario == 'gerente' && req.body.senha == 'gerente'){
-        res.redirect('/menu');
-    } else {
-        res.redirect('/');
-    }
-}); */
-
-
 
 app.post('/autenticar', async (req, res) => {
 	var usuario = req.body.usuario;
