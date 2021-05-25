@@ -18,55 +18,111 @@
     <main>
         <div class="venda-main">
             <div class="venda-pesquisa">
-                <input type="text" name="pesquisa" id="search" placeholder="Digite o item p/ incluir" required>
+                <input type="text" name="pesquisa" id="search" placeholder="Digite o item p/ incluir" list= "busca" required>
                 <button class="butao-pesquisa"><i class="fas fa-search"></i></button>
+                <datalist id="busca">
+                    <option value="a"></option>
+                    <option value="b"></option>
+                    <option value="C"></option>
+                    <option value="d"></option>
+                    <option value="e"></option>
+                    <option value="F"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="Tiago G"></option>
+                    <option value="Tiago M"></option>
+                </datalist>
             </div>
             <div class="venda-total">
 
             </div>
             <div class="venda-tabela">
-                <div class="venda-tabela-header">
-                    <div>
-                        <h1>Código</h1>
-                    </div>
-                    <div>
-                        <h1>Descrição</h1>
-                    </div>
-                    <div>
-                        <h1>Quantidade</h1>
-                    </div>
-                    <div>
-                        <h1>Preço</h1>
-                    </div>
-                </div>
-                <div class="venda-tabela-main">
                     <table>
-                        <tbody>
-                            <tr>
-                                <td>001</td>
-                                <td>João Oliveira</td>
-                                <td>gerenJO</td>
-                                <td>123456</td>
-                            </tr>
-                            <tr>
-                            
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890123</td>
+                            <td>Jordan</td>
+                            <td>1</td>
+                            <td>399.99</td>
+                        </tr>
+                      </table>
             </div>
             <div class="venda-butoes-cpf">
                 <div class="venda-cpf">
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF: " required>
+                    <!–informar se o cpf não estiver cadastrado ->
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF: " required> 
                 </div>
                 <div class="venda-butoes">
-                    <div>
-                        <button>Remover Item</button>
+                    <div class="venda-remover">
+                        <!- muda para tela de cancelamento para remover item da compra com a senha do gerente ->
+                        <a href="/web/components/cancelamento.html"><button>Remover Item</button></a>
                     </div>
-                    <div>
+                    <div class="venda-cancel">
+                        <!- cancelar a compra inteira ->
                         <button>Cancelar</button>
                     </div>
-                    <div>
+                    <div class="venda-finalizar">
+                        <!- imprimir em pdf nota fiscal quando finalizar a compra ->
                         <button>Finalizar</button>
                     </div>
                 </div>
