@@ -17,48 +17,68 @@
         </div>
     </header>
     <main>
-        <div></div>
-        <div class="funcionarios-main">
-
-            <div class="funcionarios-nome">
-                <h1>Nome</h1>
+        <div class="funcionarios-tabela">
+            <div class="funcionarios-tabela-header">
+            <div>
+                <div>
+                    <h1>Nome</h1>
+                </div>
+                <div>
+                    <h1>Login</h1>
+                </div>
+                <div>
+                    <h1>Senha</h1>
+                </div>
+                <div>
+                    <h1>Função</h1>
+                </div>
             </div>
-            <div class="funcionarios-login">
-                <h1>Login</h1>
             </div>
-            <div class="funcionarios-senha">
-                <h1>Senha</h1>
-            </div>  
-            <div class="funcionarios-funçao">
-                <h1>Função</h1>     
-            </div>       
-            <div class="tabela">
-        
-              
-                <table id="t01" border="1px" >
-                    <thead>
-                        <tr>
-                            
-                        </tr>
-                    </thead>
+            <div class="funcionarios-tabela-main">
+                <table>
                     <tbody>
                         <tr>
                             <td>001</td>
                             <td>João Oliveira</td>
                             <td>gerenJO</td>
                             <td>123456</td>
-                            <td>Gerente</td>
                         </tr>
                         <tr>
-                           
+                        
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
-            
         </div>
-       
+        <div>
+            <div class="funcionario-botao-nome">
+                <div class="funcionario-nome">
+                    <h1>Nome:</h1>
+                    <input type="text" name="Nome" id="nome-func" placeholder="Nome: " required>
+                </div>
+                <div class="funcionario-login">
+                    <h1>Login:</h1>
+                    <input type="text" name="Login" id="login-func" placeholder="Login: " required>
+                    
+                </div>
+                <div class="funcionario-senha">
+                    <h1>Senha:</h1>
+                    <input type="text" name="Senha" id="senha-func" placeholder="Senha: " required>
+                    
+                </div>
+                <div class="func-botoes">
+                    <div>
+                        <button>Adicionar</button>
+                    </div>
+                    <div>
+                        <button>Atualizar</button>
+                    </div>
+                    <div>
+                        <button>Deletar</button>
+                    </div>
+                </div>
+
+        </div>
     </main>
     <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
 </body>
