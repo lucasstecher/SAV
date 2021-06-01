@@ -90,38 +90,71 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .venda-tabela{
-    background-color: #33B78F;
+    background-color: #54CFAA;
     display: flex;
     width: 95vw;
     height: 60vh;
     margin: 0 auto 30px auto;
-    padding-top: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+}
+.venda-tabela-header{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 5vh;
+}
+.venda-tabela-header div{
+    background-color: #33B78F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17.15vw;
+    padding: 1rem 1rem 1rem 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Roboto', sans-serif;
+}
+.venda-tabela-tabela{
+    background-color: #54CFAA;
+    display: flex;
+    width: 95vw;
+    height: 55vh;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
     --scrollbarBG: #54CFAA;
     --thumbBG: #33B78F;
 }
-.venda-tabela th{
-    padding-right: 16rem;
-    border-style: solid;
-    font-size: 3rem;
-
-    position: sticky;
-    top: 0;
+.venda-tabela-tabela table{
+    background-color: #33B78F;
+    margin: 0.1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.venda-tabela td{
+.venda-tabela-tabela td{
     font-size: 2rem;
-    padding-bottom: 2rem;
+    width: 19vw;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0.5rem;
 }
-.venda-tabela::-webkit-scrollbar {
+.venda-tabela-tabela button{
+    background-color: #A9E7D5;
+    display: flex;
+    width: 20%;
+    height: 100%;
+    margin-left: 150px;
+    border-style: none;
+    cursor: pointer;
+}
+.venda-tabela-tabela::-webkit-scrollbar {
     width: 11px;
 }
-.venda-tabela::-webkit-scrollbar-track {
+.venda-tabela-tabela::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
 }
-.venda-tabela::-webkit-scrollbar-thumb {
+.venda-tabela-tabela::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG) ;
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
@@ -153,16 +186,13 @@
 }
 .venda-butoes button{
     margin-right: 5rem;
-    width: 10vw;
+    width: 5vw;
     height: 5vh;
     margin-left: 10rem;
     font-size: 1.5rem;
     border-style: none;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.venda-remover button{
-    background-color: #FF4747;
 }
 .venda-cancel button{
     background-color: #C7D70F;
