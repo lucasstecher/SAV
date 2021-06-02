@@ -45,7 +45,7 @@
                             <h1>Remover</h1>
                         </div>
                     </div>
-                    <div class="venda-tabela-tabela">
+                    <div class="venda-tabela-main">
                         <table id="item">
 
                         </table>
@@ -75,10 +75,19 @@
             let text = document.getElementById("search").value;
             let list = document.getElementById("item").innerHTML;
 
-            list += "<tr>"+"<td>" +text+ "</td>"+"<td>" +text+ "</td>"+"<td>" +text+ "</td>"+"<td>" +text+ "</td>"+"<td>"+"<button>"+"Remover item"+"</button>"+"</td>"+"</tr>"
+            list += "<tr>"+
+                "<td>" +text+ "</td>"+ //codigo
+                "<td>" +text+ "</td>"+ //produto
+                "<td>" +"<input type='number' value='1'>"+ "</td>"+ //quantidade
+                "<td>" +text+ "</td>"+ //preço
+                "<td>"+"<button onclick='removerElemento(event.target)'>"+"Remover item"+"</button>"+"</td>"+
+                "</tr>"
 
             document.getElementById("item").innerHTML = list;
             document.getElementById("search").value = null;
+        }
+        function removerElemento(elementoClicado) {
+            elementoClicado.closest("tr").remove();
         }
     </script>
 </body>

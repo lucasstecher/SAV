@@ -58,6 +58,7 @@
     height: 5vh;
     margin: 10px 46px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 .venda-pesquisa input{
     border-style: none;
@@ -78,6 +79,7 @@
     cursor: pointer;
     outline: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 .venda-total{
     background-color: white;
@@ -88,6 +90,7 @@
     margin:10px 0 10px 10px;
     right: 46px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 .venda-tabela{
     background-color: #54CFAA;
@@ -97,6 +100,7 @@
     margin: 0 auto 30px auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     flex-wrap: wrap;
+    border-radius: 10px;
 }
 .venda-tabela-header{
     display: flex;
@@ -114,7 +118,7 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Roboto', sans-serif;
 }
-.venda-tabela-tabela{
+.venda-tabela-main{
     background-color: #54CFAA;
     display: flex;
     width: 95vw;
@@ -125,36 +129,58 @@
     --scrollbarBG: #54CFAA;
     --thumbBG: #33B78F;
 }
-.venda-tabela-tabela table{
+.venda-tabela-main table{
     background-color: #33B78F;
     margin: 0.1rem;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.venda-tabela-tabela td{
+.venda-tabela-main td{
     font-size: 2rem;
     width: 19vw;
     height: 2rem;
     text-align: center;
     vertical-align: middle;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
 }
-.venda-tabela-tabela button{
-    background-color: #A9E7D5;
+/*COLOCAR ICONE DE LIXEIRA NO BOTÃO*/
+.venda-tabela-main button{
+    background-color: #54CFAA;
+    font-size: 1rem;
     display: flex;
     width: 20%;
     height: 100%;
     margin-left: 150px;
     border-style: none;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: none;
 }
-.venda-tabela-tabela::-webkit-scrollbar {
+.venda-tabela-main input{
+    background-color:#33B78F;
+    font-size: 2rem;
+    width: 2.3rem;
+    height: 2rem;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-tabela-main input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+.venda-tabela-main::-webkit-scrollbar {
     width: 11px;
 }
-.venda-tabela-tabela::-webkit-scrollbar-track {
+.venda-tabela-main::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
 }
-.venda-tabela-tabela::-webkit-scrollbar-thumb {
+.venda-tabela-main::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG) ;
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
@@ -181,18 +207,20 @@
 .venda-butoes{
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 3rem;
-    margin-left: 15rem;
+    margin: auto 0 auto auto;
 }
 .venda-butoes button{
     margin-right: 5rem;
-    width: 5vw;
-    height: 5vh;
-    margin-left: 10rem;
+    width: 8vw;
+    height: 8vh;
     font-size: 1.5rem;
     border-style: none;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
 }
 .venda-cancel button{
     background-color: #C7D70F;
