@@ -2,7 +2,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-//const db = require("./models");
 
 // cria app com o módulo express
 const app = express();
@@ -13,21 +12,10 @@ app.use(bodyParser.json());
 // define o local dos statics
 app.use(express.static('../../'));
 
-
-// .get especifica o que o que acontece quando o navegador
-// entra em contato com o server e faz um get request
-// o parâmetro '/' é a raiz, e a função é o que o servidor retorna
-// REQ => DADOS ENVIADOS PELO USURÁRIO
-// RES => RESPOSTA ENVIADA AO USUÁRIO
-app.get("/", (req, res) => {
-    res.sendFile('index.html', {root:'../../web'});
-});
-
-app.get("/menu", (req, res) => {
-    res.sendFile('menu.html', {root:'../../web/components'});
-});
-
 // rotas
+
+const menuRoute = require('./routes/menuRoute');
+app.use(menuRoute);
 
 // incluir alert ao errar login/senha
 const usuarioRoute = require('./routes/usuarioRoute');
