@@ -17,7 +17,14 @@
     </header>
     <main>
         <div class="estoque-main">
-          <h1>teste</h1>  
+          
+        <form action="/salvarestoque" method="post">
+            <input type="text" name="nome" placeholder="nome" required>
+            <input type="text" name="preco" placeholder="preco" required>
+            <input type="text" name="quantidade" placeholder="quantidade" required>
+            <input type="text" name="codigo" placeholder="codigo" required>
+            <div class='botao'><button type="submit">Salvar</button></div>
+            </form>  
         </div>
     </main>
     <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>

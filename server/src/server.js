@@ -1,13 +1,14 @@
 // faz a requisição de express, algo semelhante ao #include em C ou import em py
 const express = require("express");
 const bodyParser = require("body-parser");
-// const session = require("express-session");
 const connection = require("./database/database");
 const Cliente = require("./models/Cliente");
 const Estoque = require("./models/Estoque");
 const Funcionario = require("./models/Funcionarios");
 const Gerente = require("./models/Gerente");
 const Venda = require("./models/Vendas");
+
+//const db = require("./models");
 
 // database
 
@@ -29,14 +30,6 @@ app.use(bodyParser.json());
 // define o local dos statics
 app.use(express.static('../../'));
 
-// session para login
-/* app.use(session({
-	secret: 'secret',
-	resave: true,
-	saveUninitialized: true
-}));
-app.use(bodyParser.urlencoded({extended : true}));
-app.use(bodyParser.json()); */
 
 
 // .get especifica o que o que acontece quando o navegador
@@ -53,6 +46,9 @@ app.get("/menu", (req, res) => {
 });
 
 app.get("/venda", (req, res) => {
+    Estoque.findAll({raw:true}).then(tb_estoque =>{
+        console.log(tb_estoque);
+    });
     res.sendFile('venda.html', {root:'../../web/components'});
 });
 
@@ -72,27 +68,17 @@ app.listen(3000, () => {
     console.log('Server running on port 3000')
 });
 
-// MODIFICAR. Ela apenas entra no menu, sem autenticar
-// está autenticando com valores pré definidos, editar para
+
 // funcionar procurando no banco de dados, usar parâmetro talvez? (segurança)
 // incluir alert ao errar login/senha
 
+// colcoar essa parte no controller
+// colocar query na model(somente banco)
+// AUTENTICAR LOGIN
 
-app.post('/autenticar', async (req, res) => {
-	var usuario = req.body.usuario;
-	var senha = req.body.senha;
-	if (usuario && senha) {
-        const [results] = await connection.query(`SELECT * FROM tb_gerente WHERE login_gerente = '${usuario}' AND senha_gerente = '${senha}'`);
-			if (results.length > 0) {
-				res.redirect('/menu');
-			} else {
-				res.redirect('/');
-			}
-            res.end();
-	}
-});
-
-
+// login
+const loginRoute = require('./routes/usuarioRoute');
+app.use(loginRoute);
 
 
 app.post("/salvarcliente", (req,res) =>{
@@ -107,7 +93,7 @@ app.post("/salvarcliente", (req,res) =>{
         pontos_cliente: pontos
     }).then(() => {
         console.log('Cliente adicionado!');
-        res.redirect("/");
+        res.redirect("/clientes");
     })
 });
 
@@ -123,7 +109,7 @@ app.post("/salvarestoque", (req,res) =>{
         codigo_produto: codigo
     }).then(() => {
         console.log('Produto adicionado!');
-        res.redirect("/");
+        res.redirect("/estoque");
     })
 });
 
@@ -137,7 +123,7 @@ app.post("/salvarfuncionario", (req,res) =>{
         senha_funcionario: senha
     }).then(() => {
         console.log('Funcionario adicionado!');
-        res.redirect("/");
+        res.redirect("/funcionarios");
     })
 });
 
@@ -151,7 +137,7 @@ app.post("/salvargerente", (req,res) =>{
         senha_gerente: senha,
     }).then(() => {
         console.log('Gerente adicionado!');
-        res.redirect("/");
+        res.redirect("/gerente");
     })
 });
 
