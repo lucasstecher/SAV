@@ -1,3 +1,9 @@
-app.get("/funcionarios", (req, res) => {
-    res.sendFile('funcionarios.html', {root:'../../web/components'});
-});
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/funcionariosController');
+
+
+router.get("/funcionarios", controller.index);
+router.post("/salvarfuncionario", controller.store);
+
+module.exports = router;

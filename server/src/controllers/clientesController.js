@@ -1,5 +1,4 @@
 module.exports = {
-    
     async index (req, res)  {
         res.sendFile('clientes.html', {root:'../../web/components'});
     },

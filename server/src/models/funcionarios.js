@@ -2,19 +2,19 @@ const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
 const Funcionario = connection.define('tb_funcionario', {
-    idt_functionario:{
+    idt_funcionario:{
         type: Sequelize.STRING,
         primaryKey: true
     },
-    nome_functionario:{
+    nome_funcionario:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    login_functionario:{
+    login_funcionario:{
         type: Sequelize.STRING,
         allowNull: false
     },
-    senha_functionario:{
+    senha_funcionario:{
         type: Sequelize.STRING,
         allowNull: false
     }

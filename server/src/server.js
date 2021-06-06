@@ -51,11 +51,11 @@ app.use(usuarioRoute);
 const clientesRoute = require('./routes/clientesRoute');
 app.use(clientesRoute);
 
-const estoqueRoute = require('./routes/usuarioRoute');
+const estoqueRoute = require('./routes/estoqueRoute');
 app.use(estoqueRoute);
 
-const funcionariosRoute = require('./routes/usuarioRoute');
+const funcionariosRoute = require('./routes/funcionariosRoute');
 app.use(funcionariosRoute);
 
-const gerenteRoute = require('./routes/usuarioRoute');
+const gerenteRoute = require('./routes/gerenteRoute');
 app.use(gerenteRoute);

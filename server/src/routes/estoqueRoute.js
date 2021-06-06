@@ -1,10 +1,8 @@
-app.get("/estoque", (req, res) => {
-    res.sendFile('estoque.html', {root:'../../web/components'});
-});
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/estoqueController');
 
-app.get("/venda", (req, res) => {
-    Estoque.findAll({raw:true}).then(tb_estoque =>{
-        console.log(tb_estoque);
-    });
-    res.sendFile('venda.html', {root:'../../web/components'});
-});
+router.get("/estoque", controller.index);
+router.post("/salvarestoque", controller.store);
+
+module.exports = router;
