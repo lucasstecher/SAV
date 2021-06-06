@@ -4,16 +4,6 @@ const bodyParser = require("body-parser");
 const connection = require("./database/database");
 //const db = require("./models");
 
-// database
-connection
-    .authenticate()
-    .then(() => {
-        console.log('Conexão feita com o banco de dados!');
-    })
-    .catch((msgErro) => {
-        console.log(msgErro);
-    })
-
 // cria app com o módulo express
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -37,13 +27,8 @@ app.get("/menu", (req, res) => {
     res.sendFile('menu.html', {root:'../../web/components'});
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000')
-});
-
 // rotas
 
-// login
 // incluir alert ao errar login/senha
 const usuarioRoute = require('./routes/usuarioRoute');
 app.use(usuarioRoute);
@@ -59,3 +44,18 @@ app.use(funcionariosRoute);
 
 const gerenteRoute = require('./routes/gerenteRoute');
 app.use(gerenteRoute);
+
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000')
+});
+
+// database
+connection
+    .authenticate()
+    .then(() => {
+        console.log('Conexão feita com o banco de dados!');
+    })
+    .catch((msgErro) => {
+        console.log(msgErro);
+    })
