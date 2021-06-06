@@ -2,16 +2,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-const Cliente = require("./models/Cliente");
-const Estoque = require("./models/Estoque");
-const Funcionario = require("./models/Funcionarios");
-const Gerente = require("./models/Gerente");
-const Venda = require("./models/Vendas");
-
 //const db = require("./models");
 
 // database
-
 connection
     .authenticate()
     .then(() => {
@@ -31,7 +24,6 @@ app.use(bodyParser.json());
 app.use(express.static('../../'));
 
 
-
 // .get especifica o que o que acontece quando o navegador
 // entra em contato com o server e faz um get request
 // o parâmetro '/' é a raiz, e a função é o que o servidor retorna
@@ -45,116 +37,25 @@ app.get("/menu", (req, res) => {
     res.sendFile('menu.html', {root:'../../web/components'});
 });
 
-app.get("/venda", (req, res) => {
-    Estoque.findAll({raw:true}).then(tb_estoque =>{
-        console.log(tb_estoque);
-    });
-    res.sendFile('venda.html', {root:'../../web/components'});
-});
-
-app.get("/estoque", (req, res) => {
-    res.sendFile('estoque.html', {root:'../../web/components'});
-});
-
-app.get("/clientes", (req, res) => {
-    res.sendFile('clientes.html', {root:'../../web/components'});
-});
-
-app.get("/funcionarios", (req, res) => {
-    res.sendFile('funcionarios.html', {root:'../../web/components'});
-});
-
 app.listen(3000, () => {
     console.log('Server running on port 3000')
 });
 
-
-// funcionar procurando no banco de dados, usar parâmetro talvez? (segurança)
-// incluir alert ao errar login/senha
-
-// colcoar essa parte no controller
-// colocar query na model(somente banco)
-// AUTENTICAR LOGIN
+// rotas
 
 // login
-const loginRoute = require('./routes/usuarioRoute');
-app.use(loginRoute);
+// incluir alert ao errar login/senha
+const usuarioRoute = require('./routes/usuarioRoute');
+app.use(usuarioRoute);
 
+const clientesRoute = require('./routes/clientesRoute');
+app.use(clientesRoute);
 
-app.post("/salvarcliente", (req,res) =>{
-    var nome = req.body.nome;
-    var telefone = req.body.telefone;
-    var cpf = req.body.cpf;
-    var pontos = req.body.pontos;
-    Cliente.create({
-        nome_cliente: nome,
-        tel_cliente: telefone,
-        cpf_cliente: cpf,
-        pontos_cliente: pontos
-    }).then(() => {
-        console.log('Cliente adicionado!');
-        res.redirect("/clientes");
-    })
-});
+const estoqueRoute = require('./routes/usuarioRoute');
+app.use(estoqueRoute);
 
-app.post("/salvarestoque", (req,res) =>{
-    var nome = req.body.nome;
-    var preco = req.body.preco;
-    var quantidade = req.body.quantidade;
-    var codigo = req.body.codigo;
-    Estoque.create({
-        nome_produto: nome,
-        preco_produto: preco,
-        quant_produto: quantidade,
-        codigo_produto: codigo
-    }).then(() => {
-        console.log('Produto adicionado!');
-        res.redirect("/estoque");
-    })
-});
+const funcionariosRoute = require('./routes/usuarioRoute');
+app.use(funcionariosRoute);
 
-app.post("/salvarfuncionario", (req,res) =>{
-    var nome = req.body.nome;
-    var login = req.body.login;
-    var senha = req.body.senha;
-    Funcionario.create({
-        nome_funcionario: nome,
-        login_funcionario: login,
-        senha_funcionario: senha
-    }).then(() => {
-        console.log('Funcionario adicionado!');
-        res.redirect("/funcionarios");
-    })
-});
-
-app.post("/salvargerente", (req,res) =>{
-    var nome = req.body.nome;
-    var login = req.body.login;
-    var senha = req.body.senha;
-    Gerente.create({
-        nome_gerente: nome,
-        login_gerente: login,
-        senha_gerente: senha,
-    }).then(() => {
-        console.log('Gerente adicionado!');
-        res.redirect("/gerente");
-    })
-});
-
-app.get("/gerente", (req, res) => {
-    res.sendFile('gerente.html', {root:'../../web/components'});
-});
-
-/*app.post("/salvarvenda", (req,res) =>{
-    var nome = req.body.nome;
-    var login = req.body.login;
-    var senha = req.body.senha;
-    Venda.create({
-        nome_gerente: nome,
-        login_gerente: login,
-        senha_gerente: senha,
-    }).then(() => {
-        console.log('Gerente adicionado!');
-        res.redirect("/");
-    })
-});*/
+const gerenteRoute = require('./routes/usuarioRoute');
+app.use(gerenteRoute);
