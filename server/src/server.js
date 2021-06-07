@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 
 //ejs como view engine
 app.set('view engine', 'ejs');
+const path = require('path'); 
+app.set('views', path.join('../../web/views'));
 
 // define o local dos statics
 app.use(express.static('../../'));
@@ -19,6 +21,10 @@ app.use(express.static('../../'));
 
 const menuRoute = require('./routes/menuRoute');
 app.use(menuRoute);
+
+app.use('/teste', (req, res)=>{
+    res.render('teste', { title: 'Hey', message: 'Hello there!'});
+})
 
 // incluir alert ao errar login/senha
 const usuarioRoute = require('./routes/usuarioRoute');

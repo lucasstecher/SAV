@@ -2,7 +2,7 @@ const Estoque = require("../models/Estoque");
 
 module.exports = {
     async index (req, res) {
-        res.sendFile('estoque.ejs', {root:'../../web/views'});
+        res.render('estoque');
         Estoque.findAll({raw:true}).then(tb_estoque =>{
             res.render("estoque",{
                 estoque: tb_estoque
