@@ -17,7 +17,11 @@
     </header>
     <main>
         <div class="estoque-main">
-          
+          <div class="estoque">
+              <% estoque.forEach(produto =>{ %>
+                <p><%= produto.nome %></p>
+              <%  }) %>
+          </div>
         <form action="/salvarestoque" method="post">
             <input type="text" name="nome" placeholder="nome" required>
             <input type="text" name="preco" placeholder="preco" required>

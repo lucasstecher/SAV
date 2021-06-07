@@ -1,9 +1,10 @@
+const Funcionario = require("../models/Funcionarios");
+
 module.exports = {
     async index (req, res) {
-        res.sendFile('funcionarios.html', {root:'../../web/components'});
+        res.sendFile('funcionarios.html', {root:'../../web/views'});
     },
     async store (req,res) {
-        const Funcionario = require("../models/Funcionarios");
         var nome = req.body.nome;
         var login = req.body.login;
         var senha = req.body.senha;

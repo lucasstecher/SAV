@@ -1,9 +1,15 @@
+const Estoque = require("../models/Estoque");
+
 module.exports = {
     async index (req, res) {
-        res.sendFile('estoque.html', {root:'../../web/components'});
+        res.sendFile('estoque.ejs', {root:'../../web/views'});
+        Estoque.findAll({raw:true}).then(tb_estoque =>{
+            res.render("estoque",{
+                estoque: tb_estoque
+            })
+        });
     },
     async store (req,res) {
-        const Estoque = require("../models/Estoque");
         var nome = req.body.nome;
         var preco = req.body.preco;
         var quantidade = req.body.quantidade;
@@ -21,9 +27,10 @@ module.exports = {
 }
 
 
-/* app.get("/venda", (req, res) => {
+ /* app.get("/estoque", (req, res) => {
     Estoque.findAll({raw:true}).then(tb_estoque =>{
-        console.log(tb_estoque);
+        res.render("estoque",{
+            estoque: tb_estoque
+        })
     });
-    res.sendFile('venda.html', {root:'../../web/components'});
 }); */

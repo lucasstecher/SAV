@@ -1,9 +1,10 @@
+const Cliente = require("../models/Cliente");
+
 module.exports = {
     async index (req, res)  {
-        res.sendFile('clientes.html', {root:'../../web/components'});
+        res.sendFile('clientes.html', {root:'../../web/views'});
     },
     async store (req,res) {
-        const Cliente = require("../models/Cliente");
         var nome = req.body.nome;
         var telefone = req.body.telefone;
         var cpf = req.body.cpf;

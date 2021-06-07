@@ -6,6 +6,6 @@ module.exports = {
         res.sendFile('index.html', {root:'../../web'});
     },
     async menu (req, res) {
-        res.sendFile('menu.html', {root:'../../web/components'});
+        res.sendFile('menu.html', {root:'../../web/views'});
     }
 }

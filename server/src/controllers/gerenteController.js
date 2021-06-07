@@ -1,9 +1,10 @@
+const Gerente = require("../models/Gerente");
+
 module.exports = {
     async index (req, res) {
-        res.sendFile('gerente.html', {root:'../../web/components'});
+        res.sendFile('gerente.html', {root:'../../web/views'});
     },
     async store (req,res) {
-        const Gerente = require("../models/Gerente");
         var nome = req.body.nome;
         var login = req.body.login;
         var senha = req.body.senha;
