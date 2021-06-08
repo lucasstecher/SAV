@@ -1,5 +1,4 @@
 const Estoque = require("../models/Estoque");
-var obj = {}
 module.exports = {
     async index (req, res) {
         Estoque.findAll({raw:true, order:[
