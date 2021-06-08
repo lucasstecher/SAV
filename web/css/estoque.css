@@ -95,4 +95,23 @@ table{
     width: 100vw;
     height: 92vh;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    --scrollbarBG: #54CFAA;
+    --thumbBG: #33B78F;
+}
+.estoque-main input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+.estoque-main::-webkit-scrollbar {
+    width: 11px;
+}
+.estoque-main::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+.estoque-main::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
 }
