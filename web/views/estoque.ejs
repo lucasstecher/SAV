@@ -17,18 +17,42 @@
     </header>
     <main>
         <div class="estoque-main">
-          <div class="estoque">
-              <% estoque.forEach(produto =>{ %>
-                <p><%= produto.nome %></p>
-              <%  }) %>
-          </div>
-        <form action="/salvarestoque" method="post">
-            <input type="text" name="nome" placeholder="nome" required>
-            <input type="text" name="preco" placeholder="preco" required>
-            <input type="text" name="quantidade" placeholder="quantidade" required>
-            <input type="text" name="codigo" placeholder="codigo" required>
-            <div class='botao'><button type="submit">Salvar</button></div>
-            </form>  
+               
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Código</th>
+                        <th>Ação</th>        
+                    </tr>
+                </thead>
+                <tbody>
+                   <% estoque.forEach(produto =>{ %>
+                        <tr>
+                            <td><%= produto.idt_produto %></td>
+                            <td><%= produto.nome_produto %></td>
+                            <td><%= produto.preco_produto + " R$"%></td>
+                            <td><%= produto.quant_produto %></td>
+                            <td><%= produto.codigo_produto %></td>
+                            
+                            <td>
+                                <a href="" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                            </td>
+
+                        </tr>
+                    <%  }) %>  
+                </tbody>
+            </table>
+
         </div>
     </main>
     <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>

@@ -1,12 +1,13 @@
 const Estoque = require("../models/Estoque");
-
+var obj = {}
 module.exports = {
     async index (req, res) {
-        res.render('estoque');
-        Estoque.findAll({raw:true}).then(tb_estoque =>{
+        Estoque.findAll({raw:true, order:[
+            ['nome_produto']
+        ]}).then(estoque =>{
             res.render("estoque",{
-                estoque: tb_estoque
-            })
+                estoque: estoque 
+            });
         });
     },
     async store (req,res) {
