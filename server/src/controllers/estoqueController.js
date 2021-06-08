@@ -1,4 +1,5 @@
 const Estoque = require("../models/Estoque");
+
 module.exports = {
     async index (req, res) {
         Estoque.findAll({raw:true, order:[
@@ -22,6 +23,13 @@ module.exports = {
         }).then(() => {
             console.log('Produto adicionado!');
             res.redirect("/estoque");
+        })
+    },
+    async delete (req,res){
+        Estoque.destroy({where: {'idt_produto': req.params.id}}).then(()=>{
+            res.redirect('/estoque')
+        }).catch((erro)=>{
+            res.send('Produto não existe')
         })
     },
 }
