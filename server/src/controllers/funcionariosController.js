@@ -2,7 +2,7 @@ const Funcionario = require("../models/Funcionarios");
 
 module.exports = {
     async index (req, res) {
-        res.sendFile('funcionarios.html', {root:'../../web/views'});
+        res.render('funcionarios', {root:'../../web/views'});
     },
     async store (req,res) {
         var nome = req.body.nome;

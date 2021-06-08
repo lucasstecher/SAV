@@ -3,9 +3,9 @@
 
 module.exports = {
     async index (req, res) {
-        res.sendFile('index.html', {root:'../../web'});
+        res.render('index', {root:'../../web'});
     },
     async menu (req, res) {
-        res.sendFile('menu.html', {root:'../../web/views'});
+        res.render('menu', {root:'../../web/views'});
     }
 }

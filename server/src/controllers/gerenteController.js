@@ -2,7 +2,7 @@ const Gerente = require("../models/Gerente");
 
 module.exports = {
     async index (req, res) {
-        res.sendFile('gerente.html', {root:'../../web/views'});
+        res.render('gerente', {root:'../../web/views'});
     },
     async store (req,res) {
         var nome = req.body.nome;
