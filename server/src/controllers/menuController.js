@@ -3,7 +3,7 @@
 
 module.exports = {
     async index (req, res) {
-        res.render('index', {root:'../../web'});
+        res.render('index', {root:'../../web/views'});
     },
     async menu (req, res) {
         res.render('menu', {root:'../../web/views'});

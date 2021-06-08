@@ -42,6 +42,9 @@ app.use(funcionariosRoute);
 const gerenteRoute = require('./routes/gerenteRoute');
 app.use(gerenteRoute);
 
+const vendaRoute = require('./routes/vendaRoute');
+app.use(vendaRoute);
+
 //incluir routes/controller de vendas
 
 app.listen(3000, () => {
