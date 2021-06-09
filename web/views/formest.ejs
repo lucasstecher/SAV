@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Produto</title>
+</head>
+<body>
+    <div class="formulario">
+        <form action="/editarest" method="post">
+            <input type="hidden" name="id" value="<%= estoque.idt_produto %>">
+            <input type="text" name="nome" placeholder="nome" value="<%= estoque.nome_produto %>">
+            <input type="text" name="preco" placeholder="preco" value="<%= estoque.preco_produto %>">
+            <input type="text" name="quantidade" placeholder="quantidade" value="<%= estoque.quant_produto %>">
+            <input type="text" name="codigo" placeholder="codigo" value="<%= estoque.codigo_produto %>">
+            <div class='botao'><button type="submit">Salvar</button></div>
+            </form>  
+        </div>
+
+</body>
+</html>
