@@ -43,6 +43,9 @@
     border-radius: 10px;
     outline: none;
 }
+.menu-header button:hover{
+    background-color: #f15c5c;
+}
 .logoff{
     display: flex;
     width: 3.5rem;
@@ -56,8 +59,9 @@
 }
 
 .menu-main button{
+    background-color: #33B78F;
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 2rem;
     padding: 4rem;
     border: 0;
@@ -68,39 +72,35 @@
     cursor: pointer;
     outline: none;
 }
-
+.menu-main button:hover{
+    background-color: #54CFAA;
+}
 .menu-venda button{
-    background-color: #5494CF;
     position: absolute;
     left: 15%;
     top: 25%;
 }
 .menu-estoque button{
-    background-color: #8ACF54;
     position: absolute;
     left: 15%;
     top: 50%;
 }
 .menu-gerentes button{
-    background-color: teal;
     position: absolute;
     left: 40%;
     top: 25%;
 }
 .menu-clientes button{
-    background-color: #CF9654;
     position: absolute;
     left: 40%;
     top: 50%;
 }
 .menu-funcionarios button{
-    background-color: #D8D13A;
     position: absolute;
     left: 65%;
     top: 25%;
 }
 .menu-faturamento button{
-    background-color: #9954CF;
     position: absolute;
     left: 65%;
     top: 50%;

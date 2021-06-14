@@ -80,6 +80,9 @@ table{
     border-radius: 10px;
     outline: none;
 }
+.estoque-header button:hover{
+    background-color: #54CFAA;
+}
 .estoque-header .add{
     background-color: #33B78F;
     align-items: center;
