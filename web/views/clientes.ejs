@@ -25,14 +25,18 @@
                 <div class='botao'><button type="submit">Salvar</button></div>
             </form>
         </div>
+
         <table class="table">
+            <thead class="thead-dark"></thead>
             <thead>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>CPF</th>
-                <th>Pontos</th>
-                <th>Ação</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>CPF</th>
+                    <th>Pontos</th>
+                    <th>Ação</th>
+                </tr>
             </thead>
             <tbody>
                 <% clientes.forEach(cliente =>{ %>
