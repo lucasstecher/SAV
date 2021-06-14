@@ -2,7 +2,13 @@ const Cliente = require("../models/Cliente");
 
 module.exports = {
     async index (req, res)  {
-        res.render('clientes', {root:'../../web/views'});
+        Cliente.findAll({raw:true, order:[
+            ['nome_cliente']
+        ]}).then(clientes =>{
+            res.render("clientes",{
+                clientes: clientes 
+            });
+        });
     },
     async store (req,res) {
         var nome = req.body.nome;

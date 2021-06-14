@@ -16,15 +16,45 @@
         </div>
     </header>
     <main>
-        <form action="/salvarcliente" method="post">
-        <input type="text" name="nome" placeholder="nome" required>
-        <input type="text" name="telefone" placeholder="telefone" required>
-        <input type="text" name="cpf" placeholder="cpf" required>
-        <input type="text" name="pontos" placeholder="pontos" required>
-        <div class='botao'><button type="submit">Salvar</button></div>
-        </form>
         <div class="clientes-main">
+            <form action="/salvarcliente" method="post">
+                <input type="text" name="nome" placeholder="nome" required>
+                <input type="text" name="telefone" placeholder="telefone" required>
+                <input type="text" name="cpf" placeholder="cpf" required>
+                <input type="text" name="pontos" placeholder="pontos" required>
+                <div class='botao'><button type="submit">Salvar</button></div>
+            </form>
         </div>
+        <table class="table">
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>CPF</th>
+                <th>Pontos</th>
+                <th>Ação</th>
+            </thead>
+            <tbody>
+                <% clientes.forEach(cliente =>{ %>
+                    <tr>
+                        <td><%= cliente.idt_cliente %></td>
+                        <td><%= cliente.nome_cliente %></td>
+                        <td><%= cliente.tel_cliente %></td>
+                        <td><%= cliente.cpf_cliente %></td>
+                        <td><%= cliente.pontos_cliente %></td>
+
+                        <td>
+                            <a href="/editarcli/<%= cliente.idt_cliente %>" class="btn border-shadow update">
+                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                            <a href="/deletarcli/<%= cliente.idt_cliente %>" class="btn border-shadow delete">
+                                <span class="text-gradient"><i class="fas fa-times"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                <%  }) %>  
+            </tbody>
+        </table>
     </main>
     <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
 </body>
