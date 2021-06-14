@@ -17,18 +17,8 @@
     </header>
     <main>
         <div class="clientes-main">
-            <form action="/salvarcliente" method="post">
-                <input type="text" name="nome" placeholder="nome" required>
-                <input type="text" name="telefone" placeholder="telefone" required>
-                <input type="text" name="cpf" placeholder="cpf" required>
-                <input type="text" name="pontos" placeholder="pontos" required>
-                <div class='botao'><button type="submit">Salvar</button></div>
-            </form>
-        </div>
-
         <table class="table">
-            <thead class="thead-dark"></thead>
-            <thead>
+            <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
@@ -59,6 +49,7 @@
                 <%  }) %>  
             </tbody>
         </table>
+        </div>
     </main>
     <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
 </body>

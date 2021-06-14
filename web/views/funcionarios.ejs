@@ -17,67 +17,37 @@
         </div>
     </header>
     <main>
-        <div class="funcionarios-tabela">
-            <div class="funcionarios-tabela-header">
-            <div>
-                <div>
-                    <h1>Nome</h1>
-                </div>
-                <div>
-                    <h1>Login</h1>
-                </div>
-                <div>
-                    <h1>Senha</h1>
-                </div>
-                <div>
-                    <h1>Função</h1>
-                </div>
-            </div>
-            </div>
-            <div class="funcionarios-tabela-main">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>João Oliveira</td>
-                            <td>gerenJO</td>
-                            <td>123456</td>
-                        </tr>
-                        <tr>
-                        
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div>
-            <div class="funcionario-botao-nome">
-                <div class="funcionario-nome">
-                    <h1>Nome:</h1>
-                    <input type="text" name="Nome" id="nome-func" placeholder="Nome: " required>
-                </div>
-                <div class="funcionario-login">
-                    <h1>Login:</h1>
-                    <input type="text" name="Login" id="login-func" placeholder="Login: " required>
-                    
-                </div>
-                <div class="funcionario-senha">
-                    <h1>Senha:</h1>
-                    <input type="text" name="Senha" id="senha-func" placeholder="Senha: " required>
-                    
-                </div>
-                <div class="func-botoes">
-                    <div>
-                        <button>Adicionar</button>
-                    </div>
-                    <div>
-                        <button>Atualizar</button>
-                    </div>
-                    <div>
-                        <button>Deletar</button>
-                    </div>
-                </div>
+        <div class="funcionarios-main">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Usuario</th>
+                    <th>Senha</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% funcionarios.forEach(funcionario =>{ %>
+                    <tr>
+                        <td><%= funcionario.idt_funcionario %></td>
+                        <td><%= funcionario.nome_funcionario %></td>
+                        <td><%= funcionario.login_funcionario %></td>
+                        <td><%= funcionario.senha_funcionario %></td>
 
+                        <td>
+                            <a href="/editarfun/<%= funcionario.idt_funcionario %>" class="btn border-shadow update">
+                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                            <a href="/deletarfun/<%= funcionario.idt_funcionario %>" class="btn border-shadow delete">
+                                <span class="text-gradient"><i class="fas fa-times"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                <%  }) %>  
+            </tbody>
+        </table>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>

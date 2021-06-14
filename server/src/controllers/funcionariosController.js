@@ -1,8 +1,14 @@
 const Funcionario = require("../models/Funcionarios");
 
 module.exports = {
-    async index (req, res) {
-        res.render('funcionarios', {root:'../../web/views'});
+    async index (req, res)  {
+        Funcionario.findAll({raw:true, order:[
+            ['nome_funcionario']
+        ]}).then(funcionarios =>{
+            res.render("funcionarios",{
+                funcionarios: funcionarios 
+            });
+        });
     },
     async store (req,res) {
         var nome = req.body.nome;
