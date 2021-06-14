@@ -74,6 +74,7 @@
     height: 3rem;
     margin: 10px;
     cursor: pointer;
+    outline: none;
 }
 
 
