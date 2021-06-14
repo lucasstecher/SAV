@@ -34,12 +34,12 @@ module.exports = {
     },
     async edit(req, res){
         Estoque.findOne({where: {'idt_produto': req.params.id}}).then((estoque) => {
-            res.render("../../web/views/formest", {estoque: estoque})
+            res.render("../../web/views/editestoque", {estoque: estoque})
             //res.redirect('/estoque')
         }).catch((erro) => {
             res.send('Este produto não existe')
         })
-    } ,
+    },
     async edite(req,res){
         Estoque.findOne({where: {'idt_produto': req.body.id}}).then((estoque)=> {
             estoque.nome_produto = req.body.nome
@@ -57,5 +57,7 @@ module.exports = {
         }).catch((err) => {
             res.send('Houve um erro ao editar o produto.')
         })
+    }, async addproduto(req, res){
+        res.render('addestoque', {root:'../../web/views'});
     }
 }
