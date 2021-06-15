@@ -12,11 +12,9 @@ module.exports = {
     var login = req.body.login;
     var senha = req.body.senha;
     Venda.create({
-        nome_gerente: nome,
-        login_gerente: login,
-        senha_gerente: senha,
+       
     }).then(() => {
-        console.log('Gerente adicionado!');
-        res.redirect("/");
+        console.log('Venda Feita!');
+        res.redirect("/menu");
     })
 });*/

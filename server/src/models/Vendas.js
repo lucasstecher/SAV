@@ -9,6 +9,14 @@ const Venda = connection.define('tb_venda', {
     date_venda:{
         type: Sequelize.DATE,
         allowNull: false
+    },
+    prec_total_venda:{
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    produtos_venda:{
+        type: Sequelize.STRING,
+        allowNull: false
     }
 })
 
