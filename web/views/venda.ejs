@@ -18,7 +18,7 @@
     <main>
         <div class="venda-main">
             <div class="venda-pesquisa">
-                <input type="text" name="pesquisa" id="search" placeholder="Digite o item p/ incluir" list= "busca" required>
+                <input type="text" name="pesquisa" id="search" placeholder="Digite o item p/ incluir" list= "busca" method="POST" required>
                 <button onclick="adicionar()" class="butao-pesquisa"><i class="fas fa-plus"></i></button>
                 <datalist id="busca">
                 <% estoque.forEach(produto =>{ %>
@@ -82,7 +82,7 @@
                 "<td>" +text+ "</td>"+ //produto
                 "<td>" +"<input type='number' value='1'>"+ "</td>"+ //quantidade
                 "<td>" +text+ "</td>"+ //preço
-                "<td>"+"<button onclick='removerElemento(event.target)'>"+"Remover item"+"</button>"+"</td>"+
+                "<td>"+"<button onclick='removerElemento(event.target)'>"+"X"+"</button>"+"</td>"+
                 "</tr>"
 
             document.getElementById("item").innerHTML = list;
