@@ -40,7 +40,7 @@ module.exports = {
             res.send('Este produto não existe')
         })
     },
-    async edite(req,res){
+    async editproduto(req,res){
         Estoque.findOne({where: {'idt_produto': req.body.id}}).then((estoque)=> {
             estoque.nome_produto = req.body.nome
             estoque.preco_produto = req.body.preco

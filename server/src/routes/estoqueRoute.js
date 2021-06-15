@@ -6,7 +6,7 @@ router.get("/estoque", controller.index);
 router.post("/salvarestoque", controller.store);
 router.get("/deletarest/:id", controller.delete);
 router.get("/editarest/:id", controller.edit);
-router.post("/editarest", controller.edite);
+router.post("/editarest", controller.editproduto);
 router.get("/addproduto", controller.addproduto);
 
 module.exports = router;
