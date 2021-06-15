@@ -1,12 +1,17 @@
 //const Venda = require("../models/Vendas");
+const Estoque = require("../models/Estoque");
 
 module.exports = {
     async index (req, res) {
-        res.render('venda', {root:'../../web/views'});
+        Estoque.findAll({raw:true, order:[
+            ['nome_produto']
+        ]}).then(estoque =>{
+            res.render("venda",{
+                estoque: estoque 
+            });
+        });
     }
-
 }
-
 /*app.post("/salvarvenda", (req,res) =>{
     var nome = req.body.nome;
     var login = req.body.login;

@@ -21,8 +21,9 @@
                 <input type="text" name="pesquisa" id="search" placeholder="Digite o item p/ incluir" list= "busca" required>
                 <button onclick="adicionar()" class="butao-pesquisa"><i class="fas fa-plus"></i></button>
                 <datalist id="busca">
-                    <option value="Tiago G"></option>
-                    <option value="Tiago M"></option>
+                <% estoque.forEach(produto =>{ %>
+                    <option value="<%= produto.nome_produto %>"></option>
+                <%  }) %>  
                 </datalist>
             </div>
             <div class="venda-total">
