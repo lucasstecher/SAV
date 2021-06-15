@@ -23,6 +23,38 @@ module.exports = {
             res.redirect("/funcionarios");
         })
     },
+    async delete (req,res){
+        Funcionario.destroy({where: {'idt_funcionario': req.params.id}}).then(()=>{
+            res.redirect('/funcionarios')
+        }).catch((erro)=>{
+            res.send('Funcionário não existe')
+        })
+    },
+    async edit(req, res){
+        Funcionario.findOne({where: {'idt_funcionario': req.params.id}}).then((funcionario) => {
+            res.render("../../web/views/editfuncionario", {funcionario: funcionario})
+            
+        }).catch((erro) => {
+            res.send('Este funcionário não existe')
+        })
+    },
+    async editfunc(req,res){
+        Funcionario.findOne({where: {'idt_funcionario': req.body.id}}).then((funcionario)=> {
+            funcionario.nome_funcionario = req.body.nome
+            funcionario.login_funcionario = req.body.login
+            funcionario.senha_funcionario = req.body.senha
+
+            funcionario.save().then(()=>{
+                
+                res.redirect('/funcionarios')
+            })
+
+        }).catch((err) => {
+            res.send('Houve um erro ao editar o funcionário.')
+        })
+    }, async addfunc(req, res){
+        res.render('addfuncionario', {root:'../../web/views'});
+    }
 }
 
 

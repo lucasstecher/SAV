@@ -14,7 +14,7 @@
         <div class="funcionarios-header">
             <h1>Funcionários</h1>
             <a href="/menu"><button class="menu"><i class="fas fa-bars"></i></button></a>
-            <a href="/add"><button class="add"><i class="fas fa-plus"></i></button></a>
+            <a href="/addfunc"><button class="add"><i class="fas fa-plus"></i></button></a>
         </div>
     </header>
     <main>
@@ -38,10 +38,10 @@
                         <td><%= funcionario.senha_funcionario %></td>
 
                         <td>
-                            <a href="/editarfun/<%= funcionario.idt_funcionario %>" class="btn border-shadow update">
+                            <a href="/editarfunc/<%= funcionario.idt_funcionario %>" class="btn border-shadow update">
                                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                             </a>
-                            <a href="/deletarfun/<%= funcionario.idt_funcionario %>" class="btn border-shadow delete">
+                            <a href="/deletarfunc/<%= funcionario.idt_funcionario %>" class="btn border-shadow delete">
                                 <span class="text-gradient"><i class="fas fa-times"></i></span>
                             </a>
                         </td>
