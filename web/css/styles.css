@@ -76,10 +76,11 @@
     cursor: pointer;
     outline: none;
 }
-
-
 .botao{
     display: flex;
     width: 33rem;
     justify-content: center;
+}
+.botao :hover{
+    background-color: #33B78F;
 }

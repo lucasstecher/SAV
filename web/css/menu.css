@@ -77,32 +77,32 @@
 }
 .menu-venda button{
     position: absolute;
-    left: 15%;
+    left: 13%;
     top: 25%;
 }
 .menu-estoque button{
     position: absolute;
-    left: 15%;
+    left: 13%;
     top: 50%;
 }
 .menu-gerentes button{
     position: absolute;
-    left: 40%;
+    left: 38%;
     top: 25%;
 }
 .menu-clientes button{
     position: absolute;
-    left: 40%;
+    left: 38%;
     top: 50%;
 }
 .menu-funcionarios button{
     position: absolute;
-    left: 65%;
+    left: 63%;
     top: 25%;
 }
 .menu-faturamento button{
     position: absolute;
-    left: 65%;
+    left: 63%;
     top: 50%;
 }
 
