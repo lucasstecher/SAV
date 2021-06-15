@@ -8,17 +8,38 @@
     <title>Editar Produto</title>
 </head>
 <body>
-    
-    <div class="formulario">
-        <form action="/editarest" method="post">
-            <input type="hidden" name="id" value="<%= estoque.idt_produto %>">
-            <input type="text" name="nome" placeholder="nome" value="<%= estoque.nome_produto %>">
-            <input type="text" name="preco" placeholder="preco" value="<%= estoque.preco_produto %>">
-            <input type="text" name="quantidade" placeholder="quantidade" value="<%= estoque.quant_produto %>">
-            <input type="text" name="codigo" placeholder="codigo" value="<%= estoque.codigo_produto %>">
-            <div class='botao'><button type="submit">Salvar</button></div>
-            </form>  
+    <header>
+        <div class="menu-header">
+            <h1>Editar Produto</h1>
+            <a href="/estoque"><button><i class="fas fa-long-arrow-alt-left"></i></button></a>
         </div>
+    </header>
+        <form action="/editarest" method="POST" id="update_est">
+            <div class="new_est">
+                <div class="form-group">
+                    <label class="text-light">Nome</label>
+                    <input type="hidden" name="id" value="<%= estoque.idt_produto %>">
+                    <input type="text" name="nome" value="<%= estoque.nome_produto %>">
+                </div>
+                <div class="form-group">
+                 <label class="text-light">Preço</label>
+                 <input type="text" name="preco" value="<%= estoque.preco_produto %>">
+             </div>
+             <div class="form-group">
+                 <label class="text-light">Quantidade</label>
+                 <input type="text" name="quantidade" value="<%= estoque.quant_produto %>">
+             </div>
+             <div class="form-group">
+                 <label class="text-light">Codigo</label>
+                 <input type="text" name="codigo" value="<%= estoque.codigo_produto %>">
+             </div>
+             <div class="form-group">
+                 <button type="submit" class="btn text-dark update">Salvar</button>
+             </div>
+             
+            </div>
+         </form>
 
+         <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
 </body>
 </html>

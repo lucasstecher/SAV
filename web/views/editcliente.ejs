@@ -8,17 +8,39 @@
     <title>Editar Cliente</title>
 </head>
 <body>
-    
-    <div class="formulario">
-        <form action="/editarcli" method="post">
-            <input type="hidden" name="id" value="<%= cliente.idt_cliente %>">
-            <input type="text" name="nome" value="<%= cliente.nome_cliente %>">
-            <input type="text" name="telefone" value="<%= cliente.tel_cliente %>">
-            <input type="text" name="cpf" value="<%= cliente.cpf_cliente %>">
-            <input type="text" name="pontos" value="<%= cliente.pontos_cliente %>">
-            <div class='botao'><button type="submit">Salvar</button></div>
-            </form>  
+    <header>
+        <div class="menu-header">
+            <h1>Editar Cliente</h1>
+            <a href="/clientes"><button><i class="fas fa-long-arrow-alt-left"></i></button></a>
         </div>
+    </header>
 
+        <form action="/editarcli" method="POST" id="update_est">
+            <div class="new_est">
+                <div class="form-group">
+                    <label class="text-light">Nome</label>
+                    <input type="hidden" name="id" value="<%= cliente.idt_cliente %>">
+                    <input type="text" name="nome" value="<%= cliente.nome_cliente %>">
+                </div>
+                <div class="form-group">
+                 <label class="text-light">Telefone</label>
+                 <input type="text" name="telefone" value="<%= cliente.tel_cliente %>">
+             </div>
+             <div class="form-group">
+                 <label class="text-light">CPF</label>
+                 <input type="text" name="cpf" value="<%= cliente.cpf_cliente %>">
+             </div>
+             <div class="form-group">
+                 <label class="text-light">Pontos</label>
+                 <input type="text" name="pontos" value="<%= cliente.pontos_cliente %>">
+             </div>
+             <div class="form-group">
+                 <button type="submit" class="btn text-dark update">Salvar</button>
+             </div>
+             
+            </div>
+         </form>
+
+         <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
 </body>
 </html>
