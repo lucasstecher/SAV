@@ -69,10 +69,6 @@
     --scrollbarBG: #54CFAA;
     --thumbBG: #33B78F;
 }
-.venda-table input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
 .venda-table::-webkit-scrollbar {
     width: 11px;
 }
@@ -87,6 +83,7 @@
 table{
     border-spacing: 0px;
     width: 100%;
+    font-size: 1.5rem;
     font-family: 'Roboto', sans-serif; 
 }
 
@@ -116,6 +113,21 @@ table{
     background-color: #2b2d42;
     border-color: #32383e;
 }
+.venda-qtd{
+    background-color:transparent;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 2rem;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.venda-qtd input::-webkit-inner-spin-button {
+    -webkit-appearance:button;
+    margin: 0;
+  }
 .venda-butoes-cpf{
     background-color: #54CFAA;
     display: flex;
