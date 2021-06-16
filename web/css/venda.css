@@ -45,160 +45,76 @@
     color: #A9E7D5;
     font-size: 2.6rem;
 }
+.venda-header button:hover{
+    background-color: #54CFAA;
+}
 .venda-main{
     background-color: #A9E7D5;
     display: flex;
     width: 100vw;
     height: 92vh;
     flex-wrap: wrap;
-}
-.venda-pesquisa{
-    background-color: white;
-    width: 35vw;
-    height: 5vh;
-    margin: 10px 46px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-.venda-pesquisa input{
-    border-style: none;
-    width: 30vw;
-    height: 5vh;
-    font-size: 30px;
-    outline: none;
-    margin-left: 10px;
-}
-.venda-pesquisa button{
-    background-color: #33B78F;
-    color: white;
-    border-style: none;
-    width: 3vw;
-    height: 5vh;
-    font-size: 30px;
-    float: right;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-.venda-pesquisa button:hover{
-    background-color: #54cfaa;
-}
-.venda-header button:hover{
-    background-color: #54CFAA;
-}
-.venda-total{
-    background-color: white;
-    width: 20vw;
-    height: 5vh;
-    align-items: right;
-    position: absolute;
-    margin:10px 0 10px 10px;
-    right: 46px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-.venda-total h2{
-    display: flex;
-    padding: 0.7rem;
-
-}
-.venda-tabela{
-    background-color: #54CFAA;
-    display: flex;
-    width: 95vw;
-    height: 60vh;
-    margin: 0 auto 30px auto;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    flex-wrap: wrap;
-    border-radius: 10px;
-}
-.venda-tabela-header{
-    display: flex;
-    flex-wrap: nowrap;
-    height: 5vh;
-}
-.venda-tabela-header div{
-    background-color: #33B78F;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 17.15vw;
-    padding: 1rem 1rem 1rem 1rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Roboto', sans-serif;
-}
-.venda-tabela-main{
-    background-color: #54CFAA;
-    display: flex;
-    width: 95vw;
-    height: 55vh;
-    overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
     --scrollbarBG: #54CFAA;
     --thumbBG: #33B78F;
 }
-.venda-tabela-main table{
-    background-color: #33B78F;
-    margin: 0.1rem;
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.venda-tabela-main td{
-    font-size: 2rem;
-    width: 19vw;
-    height: 2rem;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 1rem;
-}
-/*COLOCAR ICONE DE LIXEIRA NO BOTÃO*/
-.venda-tabela-main button{
-    background-color: #33B78F;
-    font-size: 2.5rem;
+.venda-table{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-    margin-left: 150px;
-    border-style: none;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    outline: none;
+    width: 100vw;
+    height: 72vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    --scrollbarBG: #54CFAA;
+    --thumbBG: #33B78F;
 }
-.venda-tabela-main button:hover{
-    background-color: #54CFAA;
-}
-.venda-tabela-main input{
-    background-color:#33B78F;
-    font-size: 2rem;
-    width: 3rem;
-    height: 2rem;
-    border-style: none;
-    cursor: pointer;
-    outline: none;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.venda-tabela-main input::-webkit-inner-spin-button {
+.venda-table input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     margin: 0;
-}
-.venda-tabela-main::-webkit-scrollbar {
+  }
+.venda-table::-webkit-scrollbar {
     width: 11px;
 }
-.venda-tabela-main::-webkit-scrollbar-track {
+.venda-table::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
 }
-.venda-tabela-main::-webkit-scrollbar-thumb {
+.venda-table::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG) ;
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
+}
+table{
+    border-spacing: 0px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color: #06d6a0;
+}
+
+.table tr:hover td > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: #2b2d42;
+    border-color: #32383e;
 }
 .venda-butoes-cpf{
     background-color: #54CFAA;
