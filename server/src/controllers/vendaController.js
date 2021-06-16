@@ -1,4 +1,4 @@
-//const Venda = require("../models/Vendas");
+const Venda = require("../models/Vendas");
 const Estoque = require("../models/Estoque");
 
 module.exports = {
@@ -7,19 +7,13 @@ module.exports = {
             ['nome_produto']
         ]}).then(estoque =>{
             res.render("venda",{
-                estoque: estoque 
+                estoque: estoque,
             });
         });
+    },
+    async incluir(req, res) {
+        const connection = require("../database/database");
+        var codigo = req.body.pesquisa;
+        const [results] = await connection.query(`SELECT * FROM tb_estoque WHERE codigo_produto = '${codigo}'`);
     }
 }
-/*app.post("/salvarvenda", (req,res) =>{
-    var nome = req.body.nome;
-    var login = req.body.login;
-    var senha = req.body.senha;
-    Venda.create({
-       
-    }).then(() => {
-        console.log('Venda Feita!');
-        res.redirect("/menu");
-    })
-});*/

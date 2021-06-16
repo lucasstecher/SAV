@@ -17,6 +17,10 @@ const Venda = connection.define('tb_venda', {
     produtos_venda:{
         type: Sequelize.STRING,
         allowNull: false
+    },
+    cliente_venda:{
+        type: Sequelize.STRING,
+        allowNull: false
     }
 })
 
