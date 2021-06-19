@@ -7,11 +7,11 @@ module.exports = {
             ['nome_produto']
         ]}).then(estoque =>{
             res.render("venda",{
-                estoque: estoque,
+                estoque: estoque
             });
         });
     },
-    async incluir(req, res) {
+    async vender(req, res) {
         const connection = require("../database/database");
         var codigo = req.body.pesquisa;
         const [results] = await connection.query(`SELECT * FROM tb_estoque WHERE codigo_produto = '${codigo}'`);
