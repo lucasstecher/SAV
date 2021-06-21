@@ -17,29 +17,34 @@
     </header>
     <main>
         <div class="venda-main">
-            <div class="venda-table">
-                <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Código</th>
-                                <th>Produto</th>
-                                <th>Quantidade</th>
-                                <th>Preço</th>
-                                <th>Selecionar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% estoque.forEach(produto =>{ %>
+            <div class="venda-table-carrinho">
+                <div class="venda-table">
+                    <table class="table">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <td><%= produto.codigo_produto %></td>
-                                    <td><%= produto.nome_produto %></td>
-                                    <td><input class="venda-qtd" type="number" value="1"></td> <!-- quantidade selecionavel-->
-                                    <td><%= produto.preco_produto + " R$"%></td>
-                                    <td></td> <!-- botao de selecionar-->
+                                    <th>Código</th>
+                                    <th>Produto</th>
+                                    <th>Quantidade</th>
+                                    <th>Preço</th>
+                                    <th>Selecionar</th>
                                 </tr>
-                            <%  }) %>
-                        </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                <% estoque.forEach(produto =>{ %>
+                                    <tr>
+                                        <td><%= produto.codigo_produto %></td>
+                                        <td><%= produto.nome_produto %></td>
+                                        <td><input class="venda-qtd" type="number" value="1"></td> <!-- quantidade selecionavel-->
+                                        <td><%= produto.preco_produto + " R$"%></td>
+                                        <td></td> <!-- botao de selecionar-->
+                                    </tr>
+                                <%  }) %>
+                            </tbody>
+                    </table>
+            </div>
+                <div class="venda-carrinho">
+                <h1><i class="fas fa-shopping-cart"></i>Carrinho</h1>
+                </div>
             </div>
             <div class="venda-butoes-cpf">
                 <div class="venda-cpf">
