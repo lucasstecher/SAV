@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/web/css/venda.css">
+    <link rel="icon" href="/web/assets/favicon-32x32.png">
+    <title>Venda</title>
+</head>
+<body>
+    <header>
+        <div class="venda-header">
+            <h1>Venda</h1>
+            <a href="/menufunc"><button class="menu"><i class="fas fa-bars"></i></button></a>
+        </div>
+    </header>
+    <main>
+        <div class="venda-main">
+            <div class="venda-pesquisa">
+                <input type="text" name="pesquisa" id="search" placeholder="Digite o item p/ incluir" list= "busca" method="POST" required>
+                <% estoque.forEach(produto =>{ %>
+                <button onclick= "adicionar(<%= JSON.stringify(produto) %>)" class="butao-pesquisa"><i class="fas fa-plus"></i></button>
+                <datalist id="busca">
+                    <option value=" <%= produto.nome_produto %>"> </option>
+                <%  }) %>  
+                </datalist>
+            </div>
+            <div class="venda-total">
+                <h2><i class="fas fa-shopping-cart"></i>Total:</h2>
+            </div>
+            <div class="venda-tabela">
+                    <div class="venda-tabela-header">
+                        <div>
+                            <h1>Código</h1>
+                        </div>
+                        <div>
+                            <h1>Produto</h1>
+                        </div>
+                        <div>
+                            <h1>Quantidade</h1>
+                        </div>
+                        <div>
+                            <h1>Preço</h1>
+                        </div>
+                        <div>
+                            <h1>Remover</h1>
+                        </div>
+                    </div>
+                    <div class="venda-tabela-main">
+                        <table id="item">
+
+                        </table>
+                    </div>
+            </div>
+            <div class="venda-butoes-cpf">
+                <div class="venda-cpf">
+                    <!--informar se o cpf não estiver cadastrado-->
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF: " required> 
+                </div>
+                <div class="venda-butoes">
+                    <div class="venda-cancel">
+                        <a href="/vendafun"><button>Cancelar</button></a>
+                    </div>
+                    <div class="venda-finalizar">
+                        <!-- imprimir em pdf nota fiscal quando finalizar a compra -->
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/02f026d5ac.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
+    <script>
+
+        let array = [];
+
+        function adicionar(produto){
+            
+            array.push(produto);
+            gerartable(produto);
+            console.log(array)
+
+        }
+
+        function gerartable(produto){
+            let list = document.getElementById("item").innerHTML;
+
+               list += "<tr>"+
+                "<td>" + produto.codigo_produto + "</td>"+ //codigo
+                "<td>" + produto.nome_produto + "</td>"+ //produto
+                "<td>" +"<input type='number' value='1'>"+ "</td>"+ //quantidade
+                "<td>" + produto.preco_produto + "</td>"+ //preço
+                "<td> <button onclick='removerElemento(event.target)'> X </button> </td>" +
+                "</tr>"
+                //var novalista = document.getElementById("");
+                document.getElementById("item").innerHTML = list;
+                document.getElementById("search").value = null;
+            }
+        function removerElemento(elementoClicado) {
+            elementoClicado.closest("tr").remove();
+        }   
+    </script>
+</body>
+</html>

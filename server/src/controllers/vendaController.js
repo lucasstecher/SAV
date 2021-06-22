@@ -7,13 +7,22 @@ module.exports = {
             ['nome_produto']
         ]}).then(estoque =>{
             res.render("venda",{
-                estoque: estoque
+                estoque: estoque,
             });
         });
     },
-    async vender(req, res) {
+    async incluir(req, res) {
         const connection = require("../database/database");
         var codigo = req.body.pesquisa;
         const [results] = await connection.query(`SELECT * FROM tb_estoque WHERE codigo_produto = '${codigo}'`);
+    },
+    async vendafun(req, res) {
+        Estoque.findAll({raw:true, order:[
+            ['nome_produto']
+        ]}).then(estoque =>{
+            res.render("vendafun",{
+                estoque: estoque,
+            });
+        });
     }
 }
