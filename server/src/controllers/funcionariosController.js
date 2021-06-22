@@ -52,9 +52,15 @@ module.exports = {
         }).catch((err) => {
             res.send('Houve um erro ao editar o funcionário.')
         })
-    }, async addfunc(req, res){
+    }, 
+    async addfunc(req, res){
         res.render('addfuncionario', {root:'../../web/views'});
+    },
+    async loginfunc(req, res){
+        res.render('loginfun');
+    },
+    async menufunc(req, res){
+        res.render('menufun', {root:'../../web/views'});
     }
+    
 }
-
-
