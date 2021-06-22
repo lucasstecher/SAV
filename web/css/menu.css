@@ -100,9 +100,14 @@
     left: 63%;
     top: 25%;
 }
-.menu-faturamento button{
+.menu-venda-fun{
     position: absolute;
-    left: 63%;
-    top: 50%;
+    left: 30%;
+    top: 40%;
+}
+.menu-clientes-fun{
+    position: absolute;
+    left: 50%;
+    top: 40%;
 }
 
