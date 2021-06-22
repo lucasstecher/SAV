@@ -22,7 +22,7 @@
                 <% estoque.forEach(produto =>{ %>
                 <button onclick= "adicionar(<%= JSON.stringify(produto) %>)" class="butao-pesquisa"><i class="fas fa-plus"></i></button>
                 <datalist id="busca">
-                    <option value=" <%= produto %>" label=" <%= JSON.stringify(produto.nome_produto) %>"> </option>
+                    <option value=" <%= produto.nome_produto %>"> </option>
                 <%  }) %>  
                 </datalist>
             </div>
@@ -92,17 +92,15 @@
                 "<td>" + produto.nome_produto + "</td>"+ //produto
                 "<td>" +"<input type='number' value='1'>"+ "</td>"+ //quantidade
                 "<td>" + produto.preco_produto + "</td>"+ //preço
-                "<td> <button onclick='removerElemento()'> X </button> </td>" +
+                "<td> <button onclick='removerElemento(event.target)'> X </button> </td>" +
                 "</tr>"
                 //var novalista = document.getElementById("");
                 document.getElementById("item").innerHTML = list;
                 document.getElementById("search").value = null;
-
-                function removerElemento() {
-                array.splice(array.indexOf(produto), 1);
-                gerartable();
-             }
-    }
+            }
+        function removerElemento(elementoClicado) {
+            elementoClicado.closest("tr").remove();
+        }   
     </script>
 </body>
 </html>
