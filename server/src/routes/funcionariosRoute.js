@@ -9,6 +9,8 @@ router.get("/deletarfunc/:id", controller.delete);
 router.get("/editarfunc/:id", controller.edit);
 router.post("/editarfunc", controller.editfunc);
 router.get("/addfunc", controller.addfunc);
+router.get("/loginfunc", controller.loginfunc);
+router.get("/menufunc", controller.menufunc);
 
 
 module.exports = router;
