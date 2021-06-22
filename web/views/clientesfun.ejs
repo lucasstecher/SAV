@@ -12,8 +12,8 @@
     <header>
         <div class="clientes-header">
             <h1>Clientes</h1>
-            <a href="/menufun"><button class="menu"><i class="fas fa-bars"></i></button></a>
-            <a href="/addcli"><button class="add"><i class="fas fa-plus"></i></button></a>
+            <a href="/menufunc"><button class="menu"><i class="fas fa-bars"></i></button></a>
+            <a href="/addclifun"><button class="add"><i class="fas fa-plus"></i></button></a>
         </div>
     </header>
     <main>
@@ -40,7 +40,7 @@
                         <td><%= cliente.pontos_cliente %></td>
 
                         <td>
-                            <a href="/editarcli/<%= cliente.idt_cliente %>" class="btn border-shadow update">
+                            <a href="/editarclifun/<%= cliente.idt_cliente %>" class="btn border-shadow update">
                                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                             </a>
                             <a href="/deletarcli/<%= cliente.idt_cliente %>" class="btn border-shadow delete">
