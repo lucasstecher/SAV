@@ -76,6 +76,26 @@
     cursor: pointer;
     outline: none;
 }
+.botao-func button{
+    background-color: #54CFAA;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 2.2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px;
+    border-radius: 12px;
+    width: 15rem;
+    height: 3rem;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 30rem;
+    top: 20rem;
+}
+.botao-func button:hover{
+    background-color: #33B78F;
+}
 .botao{
     display: flex;
     width: 33rem;
