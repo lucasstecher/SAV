@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/web/css/addprod.css">
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <header>
+        <div class="menu-header">
+            <h1>Editar Cliente</h1>
+            <a href="/clientesfun"><button><i class="fas fa-long-arrow-alt-left"></i></button></a>
+        </div>
+    </header>
+
+        <form action="/editarcli" method="POST" id="update_est">
+            <div class="new_est">
+                <div class="form-group">
+                    <label class="text-light">Nome</label>
+                    <input type="hidden" name="id" value="<%= cliente.idt_cliente %>">
+                    <input type="text" name="nome" value="<%= cliente.nome_cliente %>">
+                </div>
+                <div class="form-group">
+                 <label class="text-light">Telefone</label>
+                 <input type="text" name="telefone" value="<%= cliente.tel_cliente %>">
+             </div>
+             <div class="form-group">
+                 <label class="text-light">CPF</label>
+                 <input type="text" name="cpf" value="<%= cliente.cpf_cliente %>">
+             </div>
+             <div class="form-group">
+                 <label class="text-light">Pontos</label>
+                 <input type="text" name="pontos" value="<%= cliente.pontos_cliente %>">
+             </div>
+             <div class="form-group">
+                 <button type="submit" class="btn text-dark update">Salvar</button>
+             </div>
+             
+            </div>
+         </form>
+
+         <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/web/css/clientes.css">
+    <link rel="icon" href="/web/assets/favicon-32x32.png">
+    <title>Clientes</title>
+</head>
+<body>
+    <header>
+        <div class="clientes-header">
+            <h1>Clientes</h1>
+            <a href="/menufun"><button class="menu"><i class="fas fa-bars"></i></button></a>
+            <a href="/addcli"><button class="add"><i class="fas fa-plus"></i></button></a>
+        </div>
+    </header>
+    <main>
+        <div class="clientes-main">
+            
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>CPF</th>
+                    <th>Pontos</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% clientes.forEach(cliente =>{ %>
+                    <tr>
+                        <td><%= cliente.idt_cliente %></td>
+                        <td><%= cliente.nome_cliente %></td>
+                        <td><%= cliente.tel_cliente %></td>
+                        <td><%= cliente.cpf_cliente %></td>
+                        <td><%= cliente.pontos_cliente %></td>
+
+                        <td>
+                            <a href="/editarcli/<%= cliente.idt_cliente %>" class="btn border-shadow update">
+                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                            <a href="/deletarcli/<%= cliente.idt_cliente %>" class="btn border-shadow delete">
+                                <span class="text-gradient"><i class="fas fa-times"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                <%  }) %>  
+            </tbody>
+        </table>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/6b77beae8e.js" crossorigin="anonymous"></script>
+</body>
+</html>
